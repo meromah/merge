@@ -1,24 +1,26 @@
 package com.merge.controllers;
 
 import com.merge.services.BootstrapService;
-import java.io.File;
-import java.nio.file.Paths;
-import java.nio.file.Path;
 import java.sql.Connection;
 import com.merge.services.SQLiteService;
 import java.util.Properties;
-import java.io.FileInputStream;
-import java.io.IOException;
 
 public class App {
     public static void run() {
 
-        BootstrapService bootstrap = new BootstrapService();
-        Path configPath = bootstrap.getConfigPath();
+        try {
+            BootstrapService bootstrap = new BootstrapService();
 
-        Properties config = bootstrap.getConfig();
+            Properties config = bootstrap.getConfig();
 
-        Connection connection = SQLiteService.getConnection(config);
+            SQLiteService dbService = new SQLiteService(config);
+            Connection connection = dbService.getConnection();
+            dbService.close();
+        }
+        catch (Exception e) {
+            System.err.printf("Something went wrong: %o", e.getMessage());
+            System.exit(1);
+        }
         System.exit(0);
     }
 }
