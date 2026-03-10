@@ -7,7 +7,6 @@ import java.util.Properties;
 
 public class App {
     public static void run() {
-
         try {
             BootstrapService bootstrap = new BootstrapService();
 
@@ -15,10 +14,10 @@ public class App {
 
             SQLiteService dbService = new SQLiteService(config);
             Connection connection = dbService.getConnection();
-            dbService.close();
+            dbService.closeConnection();
         }
         catch (Exception e) {
-            System.err.printf("Something went wrong: %o", e.getMessage());
+            System.err.printf("Something went wrong: %s", e.getMessage());
             System.exit(1);
         }
         System.exit(0);
