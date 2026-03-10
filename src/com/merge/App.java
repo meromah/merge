@@ -1,4 +1,4 @@
-package com.merge.controllers;
+package com.merge;
 
 import com.merge.services.BootstrapService;
 import java.sql.Connection;

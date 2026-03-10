@@ -1,4 +1,4 @@
-package com.merge.services;
+package com.merge.service;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

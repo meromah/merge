@@ -1,6 +1,6 @@
-package com.merge.models;
+package com.merge.model;
 
-import com.merge.models.User;
+import com.merge.model.User;
 import java.util.Properties;
 import java.security.PrivateKey;
 

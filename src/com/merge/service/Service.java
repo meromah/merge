@@ -1,4 +1,4 @@
-package com.merge.services;
+package com.merge.service;
 
 public abstract class Service {
 }

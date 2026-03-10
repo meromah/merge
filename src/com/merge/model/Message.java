@@ -1,7 +1,7 @@
-package com.merge.models;
+package com.merge.model;
 
 import java.util.Date;
-import com.merge.models.Contact;
+import com.merge.model.Contact;
 
 public class Message {
     private final String hashId;

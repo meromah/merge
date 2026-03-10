@@ -1,4 +1,4 @@
-package com.merge.models;
+package com.merge.model;
 
 import java.time.ZonedDateTime;
 

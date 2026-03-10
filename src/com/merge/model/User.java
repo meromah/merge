@@ -1,10 +1,10 @@
-package com.merge.models;
+package com.merge.model;
 
 import java.util.Properties;
-import com.merge.exceptions.UserNotFoundException;
-import com.merge.exceptions.UserNotFullException;
+import com.merge.exception.ProfileNotFoundException;
+import com.merge.exception.ProfileNotFullException;
 import java.security.PublicKey;
-import com.merge.models.Address;
+import com.merge.model.Address;
 import java.time.ZonedDateTime;
 
 public class User {
@@ -17,6 +17,7 @@ public class User {
     // add hashid or private key signaure when private key is set
     // upon save method save this to db
     // create db table users with the given fields
+    // UUID instead of RSA signature?
 
     public User(String name, String bio, Properties config) {
         this.name = name;
@@ -28,7 +29,7 @@ public class User {
     //     String name = config.getProperty("profile.name");
     //     String bio = config.getProperty("profile.bio");
     //     if (name == null || name.isBlank()) {
-    //         throw new UserNotFoundException();
+    //         throw new ProfileNotFoundException();
     //     }
     //     return new User(name, bio, config);
     // }
@@ -67,7 +68,7 @@ public class User {
 
     public void save() {
         if (this.name == null || this.name.isBlank()) {
-            throw new UserNotFullException();
+            throw new ProfileNotFullException();
         }
         this.config.setProperty("profile.name", this.name);
         this.config.setProperty("profile.bio", this.bio);

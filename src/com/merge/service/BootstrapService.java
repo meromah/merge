@@ -1,4 +1,4 @@
-package com.merge.services;
+package com.merge.service;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

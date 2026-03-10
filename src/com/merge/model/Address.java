@@ -1,4 +1,4 @@
-package com.merge.models;
+package com.merge.model;
 
 public class Address {
     private String ip;

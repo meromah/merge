@@ -1,4 +1,4 @@
-package com.merge.exceptions;
+package com.merge.exception;
 
 
 public class ProfileNotFullException extends RuntimeException {

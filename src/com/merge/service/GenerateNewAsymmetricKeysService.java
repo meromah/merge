@@ -1,4 +1,4 @@
-package com.merge.services;
+package com.merge.service;
 
 import java.security.SecureRandom;
 import java.security.KeyPairGenerator;
