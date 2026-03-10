@@ -26,7 +26,7 @@ public class SQLiteService extends Service {
         return this.connection;
     }
 
-    public void close() {
+    public void closeConnection() {
         try {
             if (this.connection != null || !this.connection.isClosed()) {
                 connection.close();
