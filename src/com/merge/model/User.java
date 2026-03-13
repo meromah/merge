@@ -6,6 +6,7 @@ import com.merge.exception.ProfileNotFullException;
 import java.security.PublicKey;
 import com.merge.model.Address;
 import java.time.ZonedDateTime;
+import com.merge.customenum.ProfilePropertyEnum;
 
 public class User {
     private String name;
@@ -70,7 +71,7 @@ public class User {
         if (this.name == null || this.name.isBlank()) {
             throw new ProfileNotFullException();
         }
-        this.config.setProperty("profile.name", this.name);
-        this.config.setProperty("profile.bio", this.bio);
+        this.config.setProperty(ProfilePropertyEnum.NAME.toString(), this.name);
+        this.config.setProperty(ProfilePropertyEnum.BIO.toString(), this.bio);
     }
 }
