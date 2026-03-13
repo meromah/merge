@@ -5,7 +5,7 @@ import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.KeyPair;
 
-public class GenerateNewAsymmetricKeysService {
+public class KeysService {
     public KeyPair generate() {
         try {
             KeyPairGenerator generatorInstance = KeyPairGenerator.getInstance("RSA");
